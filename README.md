@@ -1,12 +1,14 @@
+# Lodash html template for webpack 
+[![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)  [![Dependency Status](https://david-dm.org/jantimon/html-tpl-loader.svg)](https://david-dm.org/jantimon/html-tpl-loader.png)
+
 Fork of [tpl-loader](https://github.com/grassator/tpl-loader) from Andrey Okonetchnikov
 
-# Lodash html template for webpack
 
 Lodash html template loader for [webpack](http://webpack.github.io/). Uses `_.template` function to compile templates and allows minfification
 
 ## Installation
 
-`npm install html-tpl-loader`
+`npm install html-tpl-loader --save-dev`
 
 ## Usage
 
@@ -71,12 +73,16 @@ The html-tpl loader allows you to configure **lodash template settings** by sett
 
 # Tests
 
+[![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)
+
 Run unit tests:
 
 ```
   npm install
   npm test
 ```
+
+
 
 ## License
 
