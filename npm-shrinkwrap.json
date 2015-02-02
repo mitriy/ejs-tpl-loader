@@ -191,18 +191,18 @@
     },
     "loader-utils": {
       "version": "0.2.6",
-      "from": "loader-utils@~0.2.2",
+      "from": "loader-utils@0.2.6",
       "resolved": "https://registry.npmjs.org/loader-utils/-/loader-utils-0.2.6.tgz",
       "dependencies": {
-        "big.js": {
-          "version": "2.5.1",
-          "from": "big.js@2.5.1",
-          "resolved": "https://registry.npmjs.org/big.js/-/big.js-2.5.1.tgz"
-        },
         "json5": {
           "version": "0.1.0",
-          "from": "json5@0.1.0",
+          "from": "json5@0.1.x",
           "resolved": "https://registry.npmjs.org/json5/-/json5-0.1.0.tgz"
+        },
+        "big.js": {
+          "version": "2.5.1",
+          "from": "big.js@~2.5.1",
+          "resolved": "https://registry.npmjs.org/big.js/-/big.js-2.5.1.tgz"
         }
       }
     }
