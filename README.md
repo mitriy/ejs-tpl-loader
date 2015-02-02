@@ -1,5 +1,5 @@
 # Lodash html template for webpack 
-[![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)  [![Dependency Status](https://david-dm.org/jantimon/html-tpl-loader.svg)](https://david-dm.org/jantimon/html-tpl-loader.png)
+[![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)  [![Dependency Status](https://david-dm.org/jantimon/html-tpl-loader.svg)](https://david-dm.org/jantimon/html-tpl-loader)
 
 Fork of [tpl-loader](https://github.com/grassator/tpl-loader) from Andrey Okonetchnikov
 
