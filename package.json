@@ -25,7 +25,7 @@
     "lodash": "*"
   },
   "dependencies": {
-    "html-minifier": "0.5.x",
+    "html-minifier": "^0.5.6",
     "loader-utils": "~0.2.2"
   },
   "devDependencies": {
