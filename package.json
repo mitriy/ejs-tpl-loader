@@ -1,11 +1,11 @@
 {
-  "name": "tpl-loader",
-  "version": "0.2.1",
-  "description": "Underscore Templates loader for webpack",
+  "name": "html-tpl-loader",
+  "version": "0.0.1",
+  "description": "Underscore HTML Templates loader for webpack",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/grassator/tpl-loader.git"
+    "url": "https://github.com/jantimon/html-tpl-loader.git"
   },
   "keywords": [
     "ejs",
@@ -17,11 +17,23 @@
     "template"
   ],
   "author": {
-    "name": "Dmitriy Kubyshkin",
-    "email": "dmitriy@kubyshkin.ru"
+    "name": "Jan Nicklas",
+    "email": "j.nicklas@me.com"
   },
   "license": "MIT",
   "peerDependencies": {
     "lodash": "*"
+  },
+  "dependencies": {
+    "html-minifier": "0.5.x",
+    "loader-utils": "~0.2.2"
+  },
+  "devDependencies": {
+    "mocha": "1.17.x",
+    "should": "3.1.x",
+    "lodash": "*"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
   }
 }
