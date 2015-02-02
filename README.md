@@ -43,8 +43,8 @@ The html-tpl loader allows you to **minify** the html before compiling by settin
   {
     module: { 
       loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl?minimize=true" },
-      ]}
+        { test: "\.tpl.html$", loader: "html-tpl?minimize=true" }
+      ]
   }
   
 ```
@@ -54,8 +54,8 @@ The html-tpl loader allows you to require **lodash** before compiling by setting
   {
     module: { 
       loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl?lodash=true" },
-      ]}
+        { test: "\.tpl.html$", loader: "html-tpl?lodash=true" }
+      ]
   }
 ```
   
@@ -66,8 +66,8 @@ The html-tpl loader allows you to configure **lodash template settings** by sett
   {
     module: { 
       loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl?evaluate=\\{\\[([\\s\\S]+?)\\]\\}&interpolate=\\{\\{([\\s\\S]+?)\\}\\}" },
-      ]}
+        { test: "\.tpl.html$", loader: "html-tpl?evaluate=\\{\\[([\\s\\S]+?)\\]\\}&interpolate=\\{\\{([\\s\\S]+?)\\}\\}" }
+      ]
   }
 ```
 
