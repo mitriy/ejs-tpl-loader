@@ -4,7 +4,7 @@
 Fork of [tpl-loader](https://github.com/grassator/tpl-loader) from Andrey Okonetchnikov
 
 
-Lodash html template loader for [webpack](http://webpack.github.io/). Uses `_.template` function to compile templates and allows minfification
+Lodash html template loader for [webpack](http://webpack.github.io/). [Uses the `_.template` function](https://lodash.com/docs#template) to compile templates and allows minification
 
 ## Installation
 
