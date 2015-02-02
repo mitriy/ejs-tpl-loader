@@ -23,10 +23,19 @@ describe("loader", function() {
 
 	it("should allow to minify html", function() {
 		loadAndEval({
-		   query: "?minimize=true&collapseWhitespace=true"
-		}, '<div>\n<h1>Hello <%= name %></h1>\n</div>')({name : 'Moon'})
+		   query: "?minimize=true"
+		}, '<h1  >Hello <%= name %></h1>')({name : 'Moon'})
 		.should.be.eql(
-			'<div><h1>Hello Moon</h1></div>'
+			'<h1>Hello Moon</h1>'
+		);
+	});
+
+	it("should allow to minify html and collapse whitespaces", function() {
+		loadAndEval({
+		   query: "?minimize=true&collapseWhitespace=true"
+		}, '<div>\n<h1>Hello <span><%= name %></span></h1>\n</div>')({name : 'Moon'})
+		.should.be.eql(
+			'<div><h1>Hello <span>Moon</span></h1></div>'
 		);
 	});
 
