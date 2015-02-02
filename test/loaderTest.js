@@ -30,6 +30,15 @@ describe("loader", function() {
 		);
 	});
 
+	it("should allow to minify html with data attributes", function() {
+		loadAndEval({
+		   query: "?minimize=true"
+		}, '<h1 data-attr="<%= name %>">Hello</h1>')({name : 'Moon'})
+		.should.be.eql(
+			'<h1 data-attr="Moon">Hello</h1>'
+		);
+	});
+
 	it("should allow to minify html and collapse whitespaces", function() {
 		loadAndEval({
 		   query: "?minimize=true&collapseWhitespace=true"
