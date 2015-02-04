@@ -71,7 +71,7 @@ The html-tpl loader allows you to configure **lodash template settings** by sett
   }
 ```
 
-# Tests
+## Tests
 
 [![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)
 
@@ -82,7 +82,9 @@ Run unit tests:
   npm test
 ```
 
+## Demo
 
+http://jantimon.github.io/html-tpl-loader/
 
 ## License
 
