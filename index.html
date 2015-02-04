@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Webpack tpl loader demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="index.bundle.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  </head>
+  <body>
+  <div class="container">
+
+      <header>
+          <h1>Webpack tpl loader demo</h1>
+
+          <p class="view"><a href="https://github.com/jantimon/html-tpl-loeader">View the Project on GitHub
+              <small>jantimon/html-tpl-loeader</small>
+          </a></p>
+          <ul>
+              <li><a href="https://github.com/jantimon/html-tpl-loeader/zipball/master">Download <strong>ZIP File</strong></a></li>
+              <li><a href="https://github.com/jantimon/html-tpl-loeader/tarball/master">Download <strong>TAR Ball</strong></a></li>
+              <li><a href="https://github.com/jantimon/html-tpl-loeader/">View On <strong>GitHub</strong></a></li>
+          </ul>
+      </header>
+
+      <section>
+        <h2>Demo</h2>
+
+        <b>file.tpl.html</b>
+        <div class="source-form">
+          <textarea id="input-tpl" class="source">
+<div>
+  <h1>
+    <%= greeting %>
+  </h1>
+</div>
+          </textarea>
+        </div>
+
+        <b>app.js</b>
+        <div class="source-form">
+          <textarea id="input-js" class="source">
+var template = require('html-tpl!file.tpl.html?minimize=true&collapseWhitespace=true');
+var output = template({greeting: 'Hello World.'});
+
+$('#output').text(output);
+          </textarea>
+          <button type="button" class="btn btn-primary source-submit" onclick="compile()">Load</button>
+        </div>
+
+      <h3>Result</h3>
+      <pre id="output" style="min-height: 150px;">Please press the "parse" button</pre>
+
+      <h2>Installation</h2>
+      <pre>npm install --save-dev html-tpl-loader</pre>
+
+      <h2>License</h2>
+
+      <p>Copyright (c) 2014 Jan Nicklas
+      Licensed under the MIT license.</p>
+      </section>
+  </div>
+
+  </body>
+</html>
