@@ -49,7 +49,7 @@ The html-tpl loader allows you to **minify** the html before compiling by settin
   
 ```
 
-The html-tpl loader allows you to require **lodash** before compiling by setting a loader query string
+The html-tpl loader allows you to add **lodash** before compiling by setting a loader query string
 
 ``` javascript
   {
