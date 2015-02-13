@@ -8,8 +8,8 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
 	    <link rel="stylesheet" href="style.css"/>
-	    <script src="index.bundle.js"></script>
 	    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js"></script>
 	  </head>
 	  <body>
 	  <div class="container">
@@ -33,22 +33,22 @@
 	        <b>file.tpl.html</b>
 	        <div class="source-form">
 	          <textarea id="input-tpl" class="source">
-	<div>
-	  <h1>
-	    <%= greeting %>
-	  </h1>
-	</div>
-	          </textarea>
+<div>
+  <h1>
+    <%= greeting %>
+  </h1>
+</div>
+</textarea>
 	        </div>
 
 	        <b>app.js</b>
 	        <div class="source-form">
 	          <textarea id="input-js" class="source">
-	var template = require('html-tpl!file.tpl.html?minimize=true&collapseWhitespace=true');
-	var output = template({greeting: 'Hello World.'});
+var template = require('html-tpl!file.tpl.html?minimize=true&collapseWhitespace=true');
+var output = template({greeting: 'Hello World.'});
 
-	$('#output').text(output);
-	          </textarea>
+$('#output').text(output);
+</textarea>
 	          <button type="button" class="btn btn-primary source-submit" onclick="compile()">Execute</button>
 	        </div>
 
@@ -65,5 +65,6 @@
 	      </section>
 	  </div>
 
+    <script src="index.bundle.js"></script>
 	  </body>
 	</html>
