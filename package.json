@@ -1,6 +1,6 @@
 {
   "name": "html-tpl-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Underscore HTML Templates loader for webpack",
   "main": "index.js",
   "repository": {
@@ -25,12 +25,12 @@
     "lodash": "*"
   },
   "dependencies": {
-    "html-minifier": "^0.7.0",
-    "loader-utils": "^0.2.6"
+    "html-minifier": "^1.1.1",
+    "loader-utils": "^0.2.12"
   },
   "devDependencies": {
-    "mocha": "1.17.x",
-    "should": "3.1.x",
+    "mocha": "2.3.x",
+    "should": "8.1.x",
     "lodash": "*"
   },
   "scripts": {
