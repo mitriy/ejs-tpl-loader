@@ -1,10 +1,7 @@
-# Lodash html template for webpack 
+# Lodash html template for webpack
 [![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)  [![Dependency Status](https://david-dm.org/jantimon/html-tpl-loader.svg)](https://david-dm.org/jantimon/html-tpl-loader)
 
-Fork of [tpl-loader](https://github.com/grassator/tpl-loader) from Andrey Okonetchnikov
-
-
-Lodash html template loader for [webpack](http://webpack.github.io/). [Uses the `_.template` function](https://lodash.com/docs#template) to compile templates and allows minification
+Combination of the html-loader and the underscore-loader for [webpack](http://webpack.github.io/). [Uses the `_.template` function](https://lodash.com/docs#template) to extract assets.
 
 ## Installation
 
@@ -16,7 +13,7 @@ Lodash html template loader for [webpack](http://webpack.github.io/). [Uses the 
 
 ``` javascript
 var template = require("html-tpl!./file.html");
-// => returns the template function compiled with undesrcore (lodash) templating engine.
+// => returns the template function compiled with underscore (lodash) templating engine.
 
 // And then use it somewhere in your code
 template(data) // Pass object with data
@@ -26,7 +23,7 @@ Alternatively you can also define html-tpl in your webpack.config file:
 
 ``` javascript
   {
-    module: { 
+    module: {
       loaders: [
         { test: "\.tpl.html$", loader: "html-tpl" },
       ]}
@@ -41,30 +38,30 @@ The html-tpl loader allows you to **minify** the html before compiling by settin
 
 ``` javascript
   {
-    module: { 
+    module: {
       loaders: [
         { test: "\.tpl.html$", loader: "html-tpl?minimize=true" }
       ]
   }
-  
+
 ```
 
-The html-tpl loader allows you to add **lodash** before compiling by setting a loader query string
+The html-tpl loader allows you to not to add **lodash** before compiling by setting a loader query string
 
 ``` javascript
   {
-    module: { 
+    module: {
       loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl?lodash=true" }
+        { test: "\.tpl.html$", loader: "html-tpl?lodash=false" }
       ]
   }
 ```
-  
+
 The html-tpl loader allows you to configure **lodash template settings** by setting a loader query string
 
 ``` javascript
   {
-    module: { 
+    module: {
       loaders: [
         { test: "\.tpl.html$", loader: "html-tpl?evaluate=\\{\\[([\\s\\S]+?)\\]\\}&interpolate=\\{\\{([\\s\\S]+?)\\}\\}" }
       ]

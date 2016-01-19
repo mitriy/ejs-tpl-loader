@@ -7,19 +7,28 @@ function loadAndEval() {
 	return module.exports;
 }
 
+function loadFakeRequireAndEval() {
+	var module = {};
+	var require = function(path) {
+		return 'loader(' + path + ')';
+	}
+	eval(loader.call.apply(loader, arguments));
+	return module.exports;
+}
+
 describe("loader", function() {
-	
-	it("should convert to requires", function() {
-		loadAndEval({}, '<h1>Hello World</h1>')().should.be.eql(
-			'<h1>Hello World</h1>'
-		);
-	});
 
 	it("should allow to pass values", function() {
 		loadAndEval({}, '<h1>Hello <%= name %></h1>')({name : 'Moon'}).should.be.eql(
 			'<h1>Hello Moon</h1>'
 		);
 	});
+
+		it("should convert to requires", function() {
+			loadFakeRequireAndEval({}, '<h1>Hello World</h1><img src="test.png">')().should.be.eql(
+				'<h1>Hello World</h1><img src=\"loader(./test.png)\">'
+			);
+		});
 
 	it("should allow to minify html", function() {
 		loadAndEval({
@@ -58,10 +67,17 @@ describe("loader", function() {
 	});
 
 	it("should allow to use lodash", function() {
-		loadAndEval({query: "?lodash=true"}, '<% _.each(items, function(item){ %><%= item %><% }) %>')
+		loadAndEval({}, '<% _.each(items, function(item){ %><%= item %><% }) %>')
 		({items: [1, 2, 3, 4, 5]})
 		.should.be.eql(
 			'12345'
+		);
+	});
+
+	it("should allow to use thhe lodash escape feature", function() {
+		loadAndEval({}, '<%- "<>" %>')({})
+		.should.be.eql(
+			'&lt;&gt;'
 		);
 	});
 });
