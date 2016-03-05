@@ -1,11 +1,10 @@
 # Lodash html template for webpack
-[![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)  [![Dependency Status](https://david-dm.org/jantimon/html-tpl-loader.svg)](https://david-dm.org/jantimon/html-tpl-loader)
 
 Combination of the html-loader and the underscore-loader for [webpack](http://webpack.github.io/). [Uses the `_.template` function](https://lodash.com/docs#template) to extract assets.
 
 ## Installation
 
-`npm install html-tpl-loader --save-dev`
+`npm install webpack-ejs-loader --save-dev`
 
 ## Usage
 
