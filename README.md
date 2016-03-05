@@ -51,6 +51,19 @@ is equivalent to
 var template = _.template('<%= template %>', {variable: 'data'}); 
 ```
 
+Also extra options may be passed to load static files, see [html-loader](https://github.com/webpack/html-loader#examples). 
+This way any static files linked in templates will be included in final webpack bundle. Example:
+
+```javascript
+module.exports = {
+  module: {
+    loaders: [
+      { test: /\.ejs$/, loader: "webpack-ejs?variable=data&attrs[]=img:src&attrs[]=source:src" },
+    ]
+  }
+};
+```
+
 ## Tests
 
 Run unit tests:
