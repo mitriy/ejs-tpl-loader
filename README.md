@@ -12,7 +12,7 @@ If you are looking for the loader which uses [EJS templating engine](https://git
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
-``` javascript
+```javascript
 var template = require("webpack-ejs!./file.ejs");
 // => returns the template function compiled with undesrcore (lodash) templating engine.
 
@@ -22,7 +22,7 @@ template(data) // Pass object with data
 
 You also should provide a global `_` variable with the lodash/underscore runtime. You can do it with the followinf webpack plugin: https://github.com/webpack/docs/wiki/list-of-plugins#provideplugin
 
-```
+```javascript
 plugins: [
     new webpack.ProvidePlugin({
         _: "underscore"
@@ -31,10 +31,12 @@ plugins: [
 ```
 
 ### Compiler options
+
 Query parameters allows to pass options for template compiller.
 
 Config example:
-``` js
+
+```javascript
 module.exports = {
   module: {
     loaders: [
@@ -44,14 +46,16 @@ module.exports = {
 };
 ```
 is equivalent to
-``` js
+
+```javascript
 var template = _.template('<%= template %>', {variable: 'data'}); 
+```
 
 ## Tests
 
 Run unit tests:
 
-```
+```javascript
   npm install
   npm test
 ```
