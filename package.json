@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jantimon/html-tpl-loader.git"
+    "url": "https://github.com/mitriy/webpack-ejs-loader.git"
   },
   "keywords": [
     "ejs",
@@ -17,8 +17,7 @@
     "template"
   ],
   "author": {
-    "name": "Jan Nicklas",
-    "email": "j.nicklas@me.com"
+    "name": "Dmitriy Kuzikov"
   },
   "license": "MIT",
   "peerDependencies": {
