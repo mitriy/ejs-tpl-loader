@@ -1,75 +1,53 @@
-# Lodash html template for webpack
+# ejs-loader for webpack
 
-Combination of the html-loader and the underscore-loader for [webpack](http://webpack.github.io/). [Uses the `_.template` function](https://lodash.com/docs#template) to extract assets.
+EJS (Underscore/LoDash Templates) loader for [webpack](http://webpack.github.io/). Uses [lodash template](http://lodash.com/docs#template) function to compile templates.
+
+If you are looking for the loader which uses [EJS templating engine](https://github.com/tj/ejs), there is [ejs-compiled-loader](https://github.com/bazilio91/ejs-compiled-loader)
 
 ## Installation
 
-`npm install webpack-ejs-loader --save-dev`
+`npm install webpack-ejs-loader`
 
 ## Usage
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ``` javascript
-var template = require("html-tpl!./file.html");
-// => returns the template function compiled with underscore (lodash) templating engine.
+var template = require("webpack-ejs!./file.ejs");
+// => returns the template function compiled with undesrcore (lodash) templating engine.
 
 // And then use it somewhere in your code
 template(data) // Pass object with data
 ```
 
-Alternatively you can also define html-tpl in your webpack.config file:
+You also should provide a global `_` variable with the lodash/underscore runtime. You can do it with the followinf webpack plugin: https://github.com/webpack/docs/wiki/list-of-plugins#provideplugin
 
-``` javascript
-  {
-    module: {
-      loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl" },
-      ]}
+```
+plugins: [
+    new webpack.ProvidePlugin({
+        _: "underscore"
+    })
+]
+```
+
+### Compiler options
+Query parameters allows to pass options for template compiller.
+
+Config example:
+``` js
+module.exports = {
+  module: {
+    loaders: [
+      { test: /\.ejs$/, loader: "webpack-ejs?variable=data" },
+    ]
   }
+};
 ```
-
-``` javascript
-  var template = require('./file.tpl.html');
-```
-
-The html-tpl loader allows you to **minify** the html before compiling by setting a loader query string
-
-``` javascript
-  {
-    module: {
-      loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl?minimize=true" }
-      ]
-  }
-
-```
-
-The html-tpl loader allows you to not to add **lodash** before compiling by setting a loader query string
-
-``` javascript
-  {
-    module: {
-      loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl?lodash=false" }
-      ]
-  }
-```
-
-The html-tpl loader allows you to configure **lodash template settings** by setting a loader query string
-
-``` javascript
-  {
-    module: {
-      loaders: [
-        { test: "\.tpl.html$", loader: "html-tpl?evaluate=\\{\\[([\\s\\S]+?)\\]\\}&interpolate=\\{\\{([\\s\\S]+?)\\}\\}" }
-      ]
-  }
-```
+is equivalent to
+``` js
+var template = _.template('<%= template %>', {variable: 'data'}); 
 
 ## Tests
-
-[![Build Status](https://secure.travis-ci.org/jantimon/html-tpl-loader.svg?branch=master)](http://travis-ci.org/jantimon/html-tpl-loader)
 
 Run unit tests:
 
@@ -78,9 +56,6 @@ Run unit tests:
   npm test
 ```
 
-## Demo
-
-http://jantimon.github.io/html-tpl-loader/
 
 ## License
 
