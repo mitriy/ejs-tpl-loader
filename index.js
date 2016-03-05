@@ -19,7 +19,7 @@ module.exports = function (source) {
   var html = inlineRequireStatements(htmlLoaderResult.substr(prefix.length).replace(/;$/, ''));
 
   var tplSettings = {};
-  ['escape', 'interpolate', 'evaluate'].forEach(function(tplSettingName) {
+  ['escape', 'interpolate', 'evaluate', 'variable'].forEach(function(tplSettingName) {
     if(typeof query[tplSettingName] === 'string') {
       tplSettings[tplSettingName] = new RegExp(query[tplSettingName], 'gm');
     }
