@@ -6,14 +6,14 @@ If you are looking for the loader which uses [EJS templating engine](https://git
 
 ## Installation
 
-`npm install ejs-tpl-loader`
+`npm install webpack-ejs-loader`
 
 ## Usage
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ```javascript
-var template = require("ejs-tpl!./file.ejs");
+var template = require("webpack-ejs!./file.ejs");
 // => returns the template function compiled with undesrcore (lodash) templating engine.
 
 // And then use it somewhere in your code
@@ -40,7 +40,7 @@ Config example:
 module.exports = {
   module: {
     loaders: [
-      { test: /\.ejs$/, loader: "ejs-tpl?variable=data" },
+      { test: /\.ejs$/, loader: "webpack-ejs?variable=data" },
     ]
   }
 };
@@ -58,7 +58,7 @@ This way any static files linked in templates will be included in final webpack 
 module.exports = {
   module: {
     loaders: [
-      { test: /\.ejs$/, loader: "ejs-tpl?variable=data&attrs[]=img:src&attrs[]=source:src" },
+      { test: /\.ejs$/, loader: "webpack-ejs?variable=data&attrs[]=img:src&attrs[]=source:src" },
     ]
   }
 };
