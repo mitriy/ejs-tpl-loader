@@ -1,6 +1,6 @@
 {
-  "name": "webpack-ejs-loader",
-  "version": "1.0.4",
+  "name": "ejs-template-loader",
+  "version": "1.0.0",
   "description": "Underscore HTML Templates loader for webpack",
   "main": "index.js",
   "repository": {
