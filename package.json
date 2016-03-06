@@ -1,11 +1,11 @@
 {
-  "name": "webpack-ejs-loader",
-  "version": "1.0.5",
+  "name": "lodash-template-loader",
+  "version": "1.0.0",
   "description": "Underscore HTML Templates loader for webpack",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mitriy/webpack-ejs-loader.git"
+    "url": "https://github.com/mitriy/lodash-template-loader.git"
   },
   "keywords": [
     "ejs",
