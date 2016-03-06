@@ -1,11 +1,11 @@
 {
-  "name": "ejst-loader",
-  "version": "1.0.0",
+  "name": "ejs-tpl-loader",
+  "version": "1.0.5",
   "description": "Lodash HTML Templates loader for webpack",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mitriy/ejst-loader.git"
+    "url": "https://github.com/mitriy/ejs-tpl-loader.git"
   },
   "keywords": [
     "ejs",
