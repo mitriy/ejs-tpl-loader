@@ -1,4 +1,4 @@
-# ejs-loader for webpack
+# ejs template loader for webpack
 
 EJS (Underscore/LoDash Templates) loader for [webpack](http://webpack.github.io/). Uses [lodash template](http://lodash.com/docs#template) function to compile templates.
 
@@ -6,14 +6,14 @@ If you are looking for the loader which uses [EJS templating engine](https://git
 
 ## Installation
 
-`npm install lodash-template-loader`
+`npm install ejst-loader`
 
 ## Usage
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ```javascript
-var template = require("lodash-template!./file.ejs");
+var template = require("ejst-loader!./file.ejs");
 // => returns the template function compiled with undesrcore (lodash) templating engine.
 
 // And then use it somewhere in your code
@@ -40,7 +40,7 @@ Config example:
 module.exports = {
   module: {
     loaders: [
-      { test: /\.ejs$/, loader: "lodash-template?variable=data" },
+      { test: /\.ejs$/, loader: "ejst?variable=data" },
     ]
   }
 };
@@ -58,7 +58,7 @@ This way any static files linked in templates will be included in final webpack 
 module.exports = {
   module: {
     loaders: [
-      { test: /\.ejs$/, loader: "lodash-template?variable=data&attrs[]=img:src&attrs[]=source:src" },
+      { test: /\.ejs$/, loader: "ejst?variable=data&attrs[]=img:src&attrs[]=source:src" },
     ]
   }
 };
